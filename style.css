@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'departure';
+    src: url('../Assets/fonts/DepartureMono-Regular.woff2') format('woff2');
+    font-weight:400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rethink';
+    src: url('../Assets/fonts/RethinkSans-Regular.ttf') format('truetype');
+    font-weight:400;
+    font-style: normal;
+}
+
+:root{
+    --color-dark: #3D4138;
+    --color-medium: #6f7666;
+    --color-light: #B8C4AB;
+    --color-accent: #FFB758;
+}
+
+*, *:before, *:after { 
+    box-sizing: border-box; 
+}
+
+* {
+    margin: 0; 
+}
+
+img {
+    max-width: 100%; 
+    border-radius: 4px;
+}
+
+
+ul { 
+    padding: 0;
+    list-style: none;
+}
+
+body{
+    font-family: 'departure', monospace;
+    color: var(--color-dark);
+    font-size: 16px;
+}
+
+.wrapper{
+    padding: 32px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 104px;
+}
+
+.header-inner{
+    max-width: 50%;
+}
+
+.header h1{
+    font-family: 'departure', monospace;
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 0.8;
+}
+
+.header-links{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.header-links a:hover{
+    text-decoration: underline;
+}
+
+.header-link{
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.header-p{
+    font-family: 'rethink', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-medium);
+}
+
+.image-container{
+}
+
+.typo-container{
+    margin: 2rem 0;
+}
+
+.typo-p{
+    font-family: 'departure', monospace;
+    font-size: 4.3034rem;
+    line-height: 0.9;
+    text-align: justify;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--color-light);
+    color: transparent;
+}
+
+.content-inner{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.paragraph-container, .content-inner > .image-container{
+    flex: 1;
+}
+
+.content-p{
+    font-family: 'rethink', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-medium);
+    margin-bottom: 1rem;
+}
+
+.images-container{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+
