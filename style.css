@@ -131,4 +131,34 @@ body{
     gap: 2rem;
 }
 
+@media (max-width: 1023px){
+    .header{
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    .header-inner{
+        max-width: 100%;
+    }
+
+    .header h1{
+        font-size: 11vw;
+    }
+
+    .header-links{
+        flex-wrap: wrap;
+    }
+
+    .content-inner{
+        flex-direction: column;
+    }
+
+    .typo-p{
+        font-size: 5vw;
+    }
+}
+
+
+
+
 
