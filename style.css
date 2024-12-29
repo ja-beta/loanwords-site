@@ -48,6 +48,13 @@ body{
     padding: 32px;
 }
 
+.hero-container{
+    min-height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -60,7 +67,7 @@ body{
 
 .header h1{
     font-family: 'departure', monospace;
-    font-size: 4.5rem;
+    font-size: 6rem;
     font-weight: 400;
     margin-bottom: 1rem;
     line-height: 0.8;
@@ -71,25 +78,30 @@ body{
     gap: 0.5rem;
 }
 
-.header-links a:hover{
-    text-decoration: underline;
+.header-link{
+    color: var(--color-dark);
+    text-decoration: none;
+    background-image: linear-gradient(var(--color-light), var(--color-light));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    text-decoration-thickness: from-font;
+    transition: background-size ease-out 0.2s;
 }
 
-.header-link{
-    text-decoration: none;
-    color: var(--color-dark);
+.header-link:hover{
+    background-size: 88% 2px;
 }
+
 
 .header-p{
     font-family: 'rethink', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.4;
     color: var(--color-medium);
 }
 
-.image-container{
-}
 
 .typo-container{
     margin: 2rem 0;
@@ -97,7 +109,7 @@ body{
 
 .typo-p{
     font-family: 'departure', monospace;
-    font-size: 4.3034rem;
+    font-size: 8vw;
     line-height: 0.9;
     text-align: justify;
     text-transform: uppercase;
@@ -109,19 +121,27 @@ body{
     display: flex;
     gap: 2rem;
     align-items: center;
+    justify-content: space-between;
 }
 
-.paragraph-container, .content-inner > .image-container{
+.paragraph-container, .content-inner > .figure-container{
     flex: 1;
+}
+
+figcaption{
+    color: var(--color-medium);
+    font-size: 0.875rem;
+    text-align: end;
 }
 
 .content-p{
     font-family: 'rethink', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.4;
     color: var(--color-medium);
     margin-bottom: 1rem;
+    max-width: 640px;
 }
 
 .images-container{
@@ -131,7 +151,16 @@ body{
     gap: 2rem;
 }
 
+.video{
+    aspect-ratio: 16/9;
+}
+
 @media (max-width: 1023px){
+
+    .hero-container{
+        min-height: auto;
+    }
+
     .header{
         flex-direction: column;
         gap: 2rem;
@@ -157,6 +186,8 @@ body{
         font-size: 5vw;
     }
 }
+
+
 
 
 
